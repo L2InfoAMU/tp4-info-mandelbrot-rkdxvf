@@ -137,4 +137,19 @@ public class ComplexTest {
     void testMultiply() {
         assertEquals(new Complex(0,0), twoI.multiply(two));
     }
+
+    @Test
+    void testReal() {
+        Complex c1 = new Complex(real, imaginary);
+        Complex c2 = new Complex(real, 0);
+        assertEquals(c2, c1.real(real));
+    }
+    @Test
+    void testAdd() {
+        Complex c1 = new Complex(real, imaginary);
+        Complex c2 = new Complex(real, imaginary);
+        Complex c3 = new Complex(-24, 20);
+        assertEquals(c3, c1.add(c2));
+    }
+
 }
