@@ -133,7 +133,7 @@ public class Complex {
      * @return <code>||this|| ** 2</code>
      */
     double squaredModulus() {
-        return this.real * this.real * this.imaginary * imaginary;
+        return this.real * this.real + this.imaginary * imaginary;
     }
     //a²+b²
     /**
