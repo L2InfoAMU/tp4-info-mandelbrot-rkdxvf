@@ -167,5 +167,10 @@ public class ComplexTest {
         Complex c2 = new Complex(44, -240); //résultat de Complex(real, imaginary) au carre
         assertEquals(c2, c1.pow(2));
     }
-
+    @Test
+    void testScale() {
+        Complex c1 = new Complex(real, imaginary);
+        Complex c2 = new Complex(real *2, imaginary*2); //résultat du nombre complex multiplié au double en paramatre de scale
+        assertEquals(c2, c1.scale(2));
+    }
 }
