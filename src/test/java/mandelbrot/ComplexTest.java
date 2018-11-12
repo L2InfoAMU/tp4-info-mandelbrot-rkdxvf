@@ -135,7 +135,7 @@ public class ComplexTest {
     }
     @Test
     void testMultiply() {
-        assertEquals(new Complex(0,0), twoI.multiply(two));
+        assertEquals(new Complex(0,0), twoI.multiply(new Complex(0,0)));
     }
 
     @Test
@@ -160,6 +160,12 @@ public class ComplexTest {
     void testModulus() {
         Complex c1 = new Complex(real, imaginary);
         assertEquals(Math.sqrt(244), c1.modulus());
+    }
+    @Test
+    void testPow() {
+        Complex c1 = new Complex(real, imaginary);
+        Complex c2 = new Complex(44, -240); //résultat de Complex(real, imaginary) au carre
+        assertEquals(c2, c1.pow(2));
     }
 
 }
