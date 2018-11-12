@@ -133,9 +133,9 @@ public class Complex {
      * @return <code>||this|| ** 2</code>
      */
     double squaredModulus() {
-        return real * real * imaginary * imaginary;
+        return this.real * this.real * this.imaginary * imaginary;
     }
-
+    //a²+b²
     /**
      * Modulus (distance to zero) of a complex number
      *
